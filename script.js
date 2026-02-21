@@ -1,10 +1,20 @@
-let boxes = [...document.querySelectorAll('.box')];
+        let boxes = [...document.querySelectorAll('.box')];
         let resetBtn = document.querySelector('#reset');
         let turnO = true;
         let newGameBtn = document.querySelector('#new-btn');
         let tttmatrix = document.querySelector('.tttmatrix');
         let winnermsg = document.querySelector('#winnermsg');
-        
+        let player1Input = document.querySelector("#player1");
+        let player2Input = document.querySelector("#player2");
+        let startBtn = document.querySelector("#start-btn");
+        let player1Name = "Player 1";
+        let player2Name = "Player 2";
+        startBtn.addEventListener("click", () => {
+    player1Name = player1Input.value || "Player 1";
+    player2Name = player2Input.value || "Player 2";
+
+    document.querySelector(".player-inputs").style.display = "none";
+});
 
         const winPatterns = [
             [0, 1, 2],
@@ -49,10 +59,12 @@ let boxes = [...document.querySelectorAll('.box')];
         };
 
         const showWinner = (winner) => {
-            winnermsg.innerText = `Congratulations, Winner is ${winner}`;
-            tttmatrix.classList.remove('hide');
+            let winnerName = winner === "O" ? player1Name : player2Name;
+             winnermsg.innerText = `Congratulations ${winnerName}! 🎉`;
+          tttmatrix.classList.remove("hide");
             disableBoxes();
-        };
+};
+          
 
         const checkWinner = () => {
             let winnerfound = false;

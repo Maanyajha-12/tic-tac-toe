@@ -7,6 +7,23 @@ body {
     background-color: #14011b; 
     text-align: center;
 }
+
+.player-inputs {
+    margin: 20px;
+}
+
+.player-inputs input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+#start-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+}
 .hidden {
     height: 75vh;
     display: flex;
