@@ -4,7 +4,7 @@
     padding: 0;
 }
 body {
-    background-color: #FAF7FB; 
+    background-color: #14011b; 
     text-align: center;
 }
 .hidden {
@@ -26,32 +26,32 @@ body {
     width: 18vmin;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.06);
+    box-shadow: 0 0 1rem rgba(237, 188, 188, 0.06);
     font-size: 8vmin;
-    color: #7A6C9D; 
-    background-color: #f8438b; 
+    color: #b6d4fb; 
+    background-color: #f6d4ff; 
 }
 #reset {
-    padding: 1rem;
+    padding: 2rem;
     font-size: 1.25rem;
-    background: #E4F0F6; 
-    color: #6A6A6A;
+    background: #f3eaf0; 
+    color: #3a041a;
     border-radius: 1rem;
     border: none;
 }
 
 
 #new-btn {
-    padding: 1rem;
+    padding: 2rem;
     font-size: 1.25rem;
-    background: #E9F5EC; 
-    color: #6A6A6A;
+    background: #f3eaf0; 
+    color: #3a041a;
     border-radius: 1rem;
     border: none;
 }
 #winnermsg {
     font-size: 8vmin;
-    color: #9A8C98; 
+    color: #fff6fe; 
 }
 .tttmatrix {
     height: 30vmin;
