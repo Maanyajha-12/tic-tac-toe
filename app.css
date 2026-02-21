@@ -7,8 +7,8 @@ body {
     background-color: #FAF7FB; 
     text-align: center;
 }
-.container {
-    height: 70vh;
+.hidden {
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,11 +49,11 @@ body {
     border-radius: 1rem;
     border: none;
 }
-#msg {
+#winnermsg {
     font-size: 8vmin;
     color: #9A8C98; 
 }
-.msg-container {
+.tttmatrix {
     height: 30vmin;
 }
 .hide {
