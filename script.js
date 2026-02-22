@@ -1,7 +1,7 @@
         let boxes = [...document.querySelectorAll('.box')];
         let resetBtn = document.querySelector('#reset');
         let turnO = true;
-        let tttmatrix = document.querySelector('.tttmatrix');
+        let hidden = document.querySelector('.hidden');
         let winnermsg = document.querySelector('#winnermsg');
         let player1Input = document.querySelector("#player1");
         let player2Input = document.querySelector("#player2");
@@ -45,30 +45,30 @@
         });
 
         function enableBoxes() {
-    for (let i = 0; i < boxes.length; i++) {
-        boxes[i].disabled = false;
-        boxes[i].innerText = "";
+         for (let i = 0; i < boxes.length; i++) {
+            boxes[i].disabled = false;
+            boxes[i].innerText = "";
     }
 }
 
         function disableBoxes() {
-    for (let i = 0; i < boxes.length; i++) {
-        boxes[i].disabled = true;
+             for (let i = 0; i < boxes.length; i++) {
+                 boxes[i].disabled = true;
     }
 }
 
-       function showWinner(winner) {
-    let winnerName = winner === "O" ? player1Name : player2Name;
-    winnermsg.innerText = `Congratulations ${winnerName} You won!`;
-    tttmatrix.classList.remove("hide");
-    disableBoxes();
+    function showWinner(winner) {
+        let winnerName = winner === "O" ? player1Name : player2Name;
+         winnermsg.innerText = `Congratulations ${winnerName} You won!`;
+          hidden.classList.remove("hide");
+          disableBoxes();
 }
           
 
-        function checkWinner() {
-    let winnerfound = false;
+    function checkWinner() {
+        let winnerfound = false;
 
-    for (let pattern of winPatterns) {
+        for (let pattern of winPatterns) {
         let pos1 = boxes[pattern[0]].innerText;
         let pos2 = boxes[pattern[1]].innerText;
         let pos3 = boxes[pattern[2]].innerText;
@@ -89,16 +89,16 @@
         });
 
         if (allBoxes) {
-            tttmatrix.classList.remove('hide');
+            hidden.classList.remove('hide');
             winnermsg.innerText = 'Match Drawn';
         }
     }
 }
 
         function resetGame() {
-    turnO = true;
-    enableBoxes();
-    tttmatrix.classList.add('hide');
+            turnO = true;
+            enableBoxes();
+            hidden.classList.add('hide');
 }
 
     resetBtn.addEventListener('click', resetGame);

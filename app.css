@@ -30,7 +30,7 @@ body {
     border-radius: 8px;
     border: none;
 }
-.hidden {
+.tttmatrix {
     display: flex;
     justify-content: center;
     align-items: center;
