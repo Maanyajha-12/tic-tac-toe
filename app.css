@@ -9,9 +9,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 80vh;
-    gap: 25px;
-    
+     min-height: 80vh;
+     gap: 25px;
 }
 
 
