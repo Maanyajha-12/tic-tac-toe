@@ -9,9 +9,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-     min-height: 100vh;
-     gap: 1rem;
+    min-height: 80vh;
+    gap: 25px;
+    
 }
+
 
 .player-inputs {
     margin: 20px;
@@ -77,6 +79,7 @@ body {
     font-size: 8vmin;
     color: #fff6fe; 
 }
+
 
 .hide {
     display: none;
