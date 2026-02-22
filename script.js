@@ -52,11 +52,11 @@
             }
         };
 
-        const disableBoxes = () => {
-            for (let box of boxes) {
-                box.disabled = true;
-            }
-        };
+        function disableBoxes() {
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].disabled = true;
+    }
+}
 
         const showWinner = (winner) => {
             let winnerName = winner === "O" ? player1Name : player2Name;
