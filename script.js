@@ -45,12 +45,12 @@
             });
         });
 
-        const enableBoxes = () => {
-            for (let box of boxes) {
-                box.disabled = false;
-                box.innerText = "";
-            }
-        };
+        function enableBoxes() {
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].disabled = false;
+        boxes[i].innerText = "";
+    }
+}
 
         function disableBoxes() {
     for (let i = 0; i < boxes.length; i++) {
@@ -58,43 +58,49 @@
     }
 }
 
-        const showWinner = (winner) => {
-            let winnerName = winner === "O" ? player1Name : player2Name;
-             winnermsg.innerText = `Congratulations ${winnerName}! 🎉`;
-          tttmatrix.classList.remove("hide");
-            disableBoxes();
-};
+       function showWinner(winner) {
+    let winnerName = winner === "O" ? player1Name : player2Name;
+    winnermsg.innerText = `Congratulations ${winnerName}! You won!`;
+    tttmatrix.classList.remove("hide");
+    disableBoxes();
+}
           
 
-        const checkWinner = () => {
-            let winnerfound = false;
-            for (let pattern of winPatterns) {
-                let pos1 = boxes[pattern[0]].innerText;
-                let pos2 = boxes[pattern[1]].innerText;
-                let pos3 = boxes[pattern[2]].innerText;
+        function checkWinner() {
+    let winnerfound = false;
 
-                if (pos1 !== "" && pos2 !== "" && pos3 !== "" && 
-                    pos1 === pos2 && pos2 === pos3) {
-                    showWinner(pos1);
-                    winnerfound = true;
-                    return;
-                }
-            }
+    for (let pattern of winPatterns) {
+        let pos1 = boxes[pattern[0]].innerText;
+        let pos2 = boxes[pattern[1]].innerText;
+        let pos3 = boxes[pattern[2]].innerText;
 
-            if (!winnerfound) {
-                const allBoxes = [...boxes].every((box) => box.innerText !== "");
-                if (allBoxes) {
-                    tttmatrix.classList.remove('hide');
-                    winnermsg.innerText = 'Match Drawn';
-                }
-            }
-        };
+        if (pos1 !== "" && pos2 !== "" && 
+            pos3 !== "" && 
+            pos1 === pos2 && pos2 === pos3) {
 
-        const resetGame = () => {
-            turnO = true;
-            enableBoxes();
-            tttmatrix.classList.add('hide');
-        };
+            showWinner(pos1);
+            winnerfound = true;
+            return;
+        }
+    }
+
+    if (!winnerfound) {
+        const allBoxes = [...boxes].every(function(box) {
+            return box.innerText !== "";
+        });
+
+        if (allBoxes) {
+            tttmatrix.classList.remove('hide');
+            winnermsg.innerText = 'Match Drawn';
+        }
+    }
+}
+
+        function resetGame() {
+    turnO = true;
+    enableBoxes();
+    tttmatrix.classList.add('hide');
+}
 
     newGameBtn.addEventListener('click', resetGame);
     resetBtn.addEventListener('click', resetGame);
