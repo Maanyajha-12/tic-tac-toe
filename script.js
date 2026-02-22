@@ -1,7 +1,6 @@
         let boxes = [...document.querySelectorAll('.box')];
         let resetBtn = document.querySelector('#reset');
         let turnO = true;
-        let newGameBtn = document.querySelector('#new-btn');
         let tttmatrix = document.querySelector('.tttmatrix');
         let winnermsg = document.querySelector('#winnermsg');
         let player1Input = document.querySelector("#player1");
@@ -60,7 +59,7 @@
 
        function showWinner(winner) {
     let winnerName = winner === "O" ? player1Name : player2Name;
-    winnermsg.innerText = `Congratulations ${winnerName}! You won!`;
+    winnermsg.innerText = `Congratulations ${winnerName} You won!`;
     tttmatrix.classList.remove("hide");
     disableBoxes();
 }
@@ -102,5 +101,4 @@
     tttmatrix.classList.add('hide');
 }
 
-    newGameBtn.addEventListener('click', resetGame);
     resetBtn.addEventListener('click', resetGame);

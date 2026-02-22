@@ -48,7 +48,6 @@ body {
     width: 18vmin;
     border-radius: 1rem;
     border: none;
-    box-shadow: 0 0 1rem rgba(237, 188, 188, 0.06);
     justify-content: center;
     align-items: center;
     font-size: 5rem;
@@ -66,14 +65,7 @@ body {
 }
 
 
-#new-btn {
-    padding: 13px 24px;
-    font-size: 1rem;
-    background: #f3eaf0; 
-    color: #3a041a;
-    border-radius: 1rem;
-    border: none;
-}
+
 #winnermsg {
     font-size: 8vmin;
     color: #fff6fe; 
