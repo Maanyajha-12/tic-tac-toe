@@ -44,7 +44,10 @@ body {
     border-radius: 1rem;
     border: none;
     box-shadow: 0 0 1rem rgba(237, 188, 188, 0.06);
-    font-size: 8vmin;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    font-weight: bold;
     color: #b6d4fb; 
     background-color: #f6d4ff; 
 }
